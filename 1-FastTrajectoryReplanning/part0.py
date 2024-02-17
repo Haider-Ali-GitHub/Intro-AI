@@ -1,7 +1,7 @@
 import numpy as np
 import random
 
-def generate_maze(size=101, p_blocked=0.3):
+def generate_maze(size=10, p_blocked=0.3):
     # Initialize the gridworld as unvisited (-1), 0 is unblocked, 1 is blocked
     grid = np.full((size, size), -1)
     
@@ -45,14 +45,28 @@ def generate_maze(size=101, p_blocked=0.3):
 
     return grid
 
-# Generate one maze for demonstration
-maze = generate_maze()
 
-# Visualize the maze
+
+# Generate one maze for demonstration
+maze_list = [generate_maze() for _ in range(50)]
+
 import matplotlib.pyplot as plt
 
-plt.figure(figsize=(10, 10))
-plt.imshow(maze, cmap='binary', origin='lower') 
-plt.title('Generated Maze')
-plt.show()
+for i, maze in enumerate(maze_list):
+    plt.figure(figsize=(5, 5))
+    plt.imshow(maze, cmap='binary', origin='lower')
+    plt.title(f'Generated Maze {i+1}')
+    plt.show()
+
+# maze = maze_list[0]
+
+# # Visualize the chosen maze
+# import matplotlib.pyplot as plt
+
+# plt.figure(figsize=(10, 10))
+# plt.imshow(maze, cmap='binary', origin='lower')
+# plt.title('Generated Maze')
+# plt.show()
+
+
 
