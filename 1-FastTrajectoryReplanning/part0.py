@@ -1,3 +1,4 @@
+import heapq
 import numpy as np
 import random
 
@@ -45,8 +46,51 @@ def generate_maze(size=101, p_blocked=0.3):
 
     return grid
 
+def heuristic(cell, goal):
+    return abs(cell[0] - goal[0]) + abs(cell[1] - goal[1])
+
+def a_star_search(grid, start, goal, tie_breaking):
+    directions = [(0, -1), (1, 0), (0, 1), (-1, 0)]
+    open_set = []
+    heapq.heappush(open_set, (0 + heuristic(start, goal), 0 if tie_breaking == "g-min" else -0, start))
+    closed_set = set()
+    came_from = {}
+
+    while open_set:
+        _, g, current = heapq.heappop(open_set)
+
+        if current == goal:
+            path = []
+            while current in came_from:
+                path.append(current)
+                current = came_from[current]
+            return path[::-1]
+
+        closed_set.add(current)
+
+        for dx, dy in directions:
+            neighbor = (current[0] + dx, current[1] + dy)
+
+            if not (0 <= neighbor[0] < grid.shape[0] and 0 <= neighbor[1] < grid.shape[1]) or grid[neighbor[1]][neighbor[0]] == 1:
+                continue
+
+            if neighbor in closed_set:
+                continue
+
+            tentative_g = g + 1 if tie_breaking == "g-min" else -(g + 1)
+            if tie_breaking == "g-min":
+                heapq.heappush(open_set, (tentative_g + heuristic(neighbor, goal), tentative_g, neighbor))
+            else:  # For "g-max", we push with negative g to prioritize larger g-values
+                heapq.heappush(open_set, (-(tentative_g - heuristic(neighbor, goal)), tentative_g, neighbor))
+            came_from[neighbor] = current
+
+    return None
+
+
 # Generate one maze for demonstration
 maze = generate_maze()
+start, goal = (0, 0), (100, 100)  # Example start and goal, adjust as needed
+path = a_star_search(maze, start, goal, tie_breaking="g-min")  # Use "g-min" or "g-max" for tie_breaking
 
 # Visualize the maze
 import matplotlib.pyplot as plt
