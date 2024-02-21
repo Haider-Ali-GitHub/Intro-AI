@@ -4,10 +4,7 @@ import numpy as np
 import random
 
 def generate_maze(size=10, p_blocked=0.3):
-    # Initialize the gridworld as unvisited (-1), 0 is unblocked, 1 is blocked
     grid = np.full((size, size), -1)
-    
-    # Directions (up, right, down, left)
     directions = [(0, -1), (1, 0), (0, 1), (-1, 0)]
     
     def is_valid(cell):
@@ -24,66 +21,56 @@ def generate_maze(size=10, p_blocked=0.3):
         while stack:
             current_cell = stack[-1]
             x, y = current_cell
-            if grid[y, x] == -1:  # If current cell is unvisited
-                grid[y, x] = 0  # Mark as visited and unblocked
+            if grid[y, x] == -1:
+                grid[y, x] = 0
                 neighbors = get_unvisited_neighbors(current_cell)
                 if neighbors:
                     next_cell = random.choice(neighbors)
-                    if random.random() < p_blocked:
-                        grid[next_cell[1], next_cell[0]] = 1  # Blocked
-                    else:
-                        stack.append(next_cell)  # Unblocked and to be visited
+                    grid[next_cell[1], next_cell[0]] = 1 if random.random() < p_blocked else 0
+                    if grid[next_cell[1], next_cell[0]] == 0:  # Continue DFS only for unblocked
+                        stack.append(next_cell)
                 else:
-                    stack.pop()  # Backtrack
+                    stack.pop()
             else:
-                stack.pop()  # Backtrack
+                stack.pop()
     
-    # Start DFS from a random cell until all cells are visited
     unvisited_cells = [(x, y) for x in range(size) for y in range(size)]
     while unvisited_cells:
         start_cell = random.choice(unvisited_cells)
         dfs(start_cell)
         unvisited_cells = [(x, y) for x, y in unvisited_cells if grid[y, x] == -1]
-
+    
     return grid
 
 def heuristic(cell, goal):
     return abs(cell[0] - goal[0]) + abs(cell[1] - goal[1])
 
-def a_star_search(maze, start, goal, tie_breaking='smaller_g'):
-    # Heuristic function: Manhattan distance
-    def heuristic(a, b):
-        return abs(a[0] - b[0]) + abs(a[1] - b[1])
-    
-    # Initialize all the necessary dictionaries
+def a_star_search(maze, start, goal, tie_breaking):
     g_score = {start: 0}
     f_score = {start: heuristic(start, goal)}
     open_set_hash = {start}
-    open_set = [(f_score[start], 0, start)]  # (f_score, g_score, position)
+    open_set = [(f_score[start], 0, start)]
     came_from = {}
+    expanded_cells = 0
     
     while open_set:
         current = heapq.heappop(open_set)[2]
         open_set_hash.remove(current)
+        expanded_cells += 1
         
         if current == goal:
-            path = []
+            path = [current]
             while current in came_from:
-                path.append(current)
                 current = came_from[current]
-            return path[::-1]  # Return reversed path
+                path.append(current)
+            path.reverse()
+            return path, expanded_cells
         
         for direction in [(0, 1), (1, 0), (0, -1), (-1, 0)]:
             neighbor = (current[0] + direction[0], current[1] + direction[1])
-            if 0 <= neighbor[0] < maze.shape[0] and 0 <= neighbor[1] < maze.shape[1]:
-                if maze[neighbor[1], neighbor[0]] == 1:  # Check if wall
-                    continue
-                
-                tentative_g_score = g_score[current] + 1
-                if neighbor not in g_score:
-                    g_score[neighbor] = np.inf
-                
-                if tentative_g_score < g_score[neighbor]:
+            if 0 <= neighbor[0] < maze.shape[0] and 0 <= neighbor[1] < maze.shape[1] and maze[neighbor[1], neighbor[0]] != 1:
+                tentative_g_score = g_score.get(neighbor, np.inf) + 1
+                if tentative_g_score < g_score.get(neighbor, np.inf):
                     came_from[neighbor] = current
                     g_score[neighbor] = tentative_g_score
                     f_score[neighbor] = tentative_g_score + heuristic(neighbor, goal)
@@ -92,62 +79,70 @@ def a_star_search(maze, start, goal, tie_breaking='smaller_g'):
                         heapq.heappush(open_set, (f_score[neighbor], tie_break, neighbor))
                         open_set_hash.add(neighbor)
     
-    return []  # Return an empty path if goal is not reachable
+    return [], expanded_cells
+
+def repeated_forward_a_star(maze, start, goal, tie_breaking):
+    discovered_maze = np.full_like(maze, -1)  # All cells are unknown
+    discovered_maze[start[1], start[0]] = 0  # Start cell is free
+    path = [start]
+    current = start
+    expanded_cells = 0
+
+    while current != goal:
+        open_set = []
+        g_score = {current: 0}
+        f_score = {current: heuristic(current, goal)}
+        open_set_hash = {current}
+        came_from = {}
+        
+        while open_set_hash:
+            current = min(open_set_hash, key=lambda x: (f_score[x], g_score[x] if tie_breaking == 'larger_g' else -g_score[x]))
+            if current == goal:
+                total_path = []
+                while current in came_from:
+                    total_path.append(current)
+                    current = came_from[current]
+                return total_path[::-1], expanded_cells
+            
+            open_set_hash.remove(current)
+            expanded_cells += 1
+            
+            for dx, dy in [(0, 1), (1, 0), (0, -1), (-1, 0)]:
+                neighbor = (current[0] + dx, current[1] + dy)
+                if 0 <= neighbor[0] < maze.shape[0] and 0 <= neighbor[1] < maze.shape[1]:
+                    if discovered_maze[neighbor[1], neighbor[0]] == -1:
+                        discovered_maze[neighbor[1], neighbor[0]] = maze[neighbor[1], neighbor[0]]
+                    
+                    if discovered_maze[neighbor[1], neighbor[0]] == 0:
+                        tentative_g_score = g_score[current] + 1
+                        if tentative_g_score < g_score.get(neighbor, np.inf):
+                            came_from[neighbor] = current
+                            g_score[neighbor] = tentative_g_score
+                            f_score[neighbor] = tentative_g_score + heuristic(neighbor, goal)
+                            if neighbor not in open_set_hash:
+                                open_set_hash.add(neighbor)
+    
+        # No path found
+        return [], expanded_cells
 
 
-# Function to get valid neighbors of a cell
-def get_neighbors(cell, maze):
-    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
-    neighbors = []
-    for direction in directions:
-        neighbor = (cell[0] + direction[0], cell[1] + direction[1])
-        if 0 <= neighbor[0] < len(maze) and 0 <= neighbor[1] < len(maze[0]) and maze[neighbor[0]][neighbor[1]] == 0:
-            neighbors.append(neighbor)
-    return neighbors
-
-# Function to reconstruct the path from start to goal
-def reconstruct_path(came_from, current):
-    path = [current]
-    while current in came_from:
-        current = came_from[current]
-        path.append(current)
-    path.reverse()
-    return path
 
 
-# Generate one maze for demonstration
-# maze_list = [generate_maze() for _ in range(50)]
 
-# import matplotlib.pyplot as plt
+size = 10
+maze = generate_maze(size, 0.3)
+start = (0, 0)
+goal = (size - 1, size - 1)
 
-# for i, maze in enumerate(maze_list):
-#     plt.figure(figsize=(5, 5))
-#     plt.imshow(maze, cmap='binary', origin='lower')
-#     plt.title(f'Generated Maze {i+1}')
-#     plt.show()
-
-maze = generate_maze(10, 0.3)  # Assuming you have your generate_maze function
-start = (0, 0)  # Starting and goal positions
-goal = (maze.shape[0]-1, maze.shape[1]-1) 
-
-path_smaller_g = a_star_search(maze, start, goal, tie_breaking='smaller_g')
+path_smaller_g, cells_expanded_smaller_g = repeated_forward_a_star(maze, start, goal, 'smaller_g')
 print(f"Path with smaller g-values: {path_smaller_g}")
+print(f"Cells expanded with smaller g-values: {cells_expanded_smaller_g}")
 
-path_larger_g = a_star_search(maze, start, goal, tie_breaking='larger_g')
+path_larger_g, cells_expanded_larger_g = repeated_forward_a_star(maze, start, goal, 'larger_g')
 print(f"Path with larger g-values: {path_larger_g}")
+print(f"Cells expanded with larger g-values: {cells_expanded_larger_g}")
 
 plt.figure(figsize=(5, 5))
 plt.imshow(maze, cmap='binary', origin='lower')
 plt.title(f'Generated Maze')
 plt.show()
-
-# maze = maze_list[0]
-
-# # Visualize the chosen maze
-# import matplotlib.pyplot as plt
-
-# plt.figure(figsize=(10, 10))
-# plt.imshow(maze, cmap='binary', origin='lower')
-# plt.title('Generated Maze')
-# plt.show()
-
