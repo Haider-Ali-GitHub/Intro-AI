@@ -140,17 +140,17 @@ def run_experiments(size=10, p_blocked=0.3, num_mazes=50):
         start = (0, 0)
         goal = (size - 1, size - 1)
 
-        
-        plt.figure(figsize=(5, 5))
-        plt.imshow(maze, cmap='binary', origin='lower')
-        plt.title(f'Generated Maze: {_ + 1}')
-        plt.show()
         path_smaller_g , cells_expanded_smaller_g = repeated_forward_a_star(maze, start, goal, 'smaller_g')
         print(f"Path with smaller g-values for Maze {_ + 1}: {path_smaller_g}")
         print(f"Cells expanded with smaller g-values Maze {_ + 1}: {cells_expanded_smaller_g}")
         path_larger_g , cells_expanded_larger_g = repeated_forward_a_star(maze, start, goal, 'larger_g')
         print(f"Path with larger g-values for Maze {_ + 1}: {path_larger_g}")
         print(f"Cells expanded with larger g-values Maze {_ + 1}: {cells_expanded_larger_g}")
+        plt.figure(figsize=(5, 5))
+        plt.imshow(maze, cmap='binary', origin='lower')
+        plt.title(f'Generated Maze: {_ + 1}')
+        plt.show()
+
 
         results_smaller_g.append(cells_expanded_smaller_g)
         results_larger_g.append(cells_expanded_larger_g)
@@ -159,12 +159,20 @@ def run_experiments(size=10, p_blocked=0.3, num_mazes=50):
     # Analysis of the results can be added here (e.g., average cells expanded)
     avg_cells_expanded_smaller_g = np.mean(results_smaller_g)
     avg_cells_expanded_larger_g = np.mean(results_larger_g)
+    plt.figure(figsize=(10, 5))
+    plt.hist([results_smaller_g, results_larger_g], label=['Smaller G', 'Larger G'], alpha=0.7)
+    plt.title("Cells Expanded Across 50 Mazes")
+    plt.xlabel("Number of Cells Expanded")
+    plt.ylabel("Frequency")
+    plt.legend()
+    plt.show()
 
     print(f"Average cells expanded with smaller g-values: {avg_cells_expanded_smaller_g}")
     print(f"Average cells expanded with larger g-values: {avg_cells_expanded_larger_g}")
 
 # Run the experiments
 run_experiments()
+
 
 # You can adjust the size, p_blocked, and num_mazes as needed
 
