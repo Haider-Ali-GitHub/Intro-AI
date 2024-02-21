@@ -125,24 +125,63 @@ def repeated_forward_a_star(maze, start, goal, tie_breaking):
         # No path found
         return [], expanded_cells
 
+import matplotlib.pyplot as plt
+import numpy as np
+import random
+
+# Assuming generate_maze and repeated_forward_a_star functions are defined as before
+
+def run_experiments(size=10, p_blocked=0.3, num_mazes=50):
+    results_smaller_g = []
+    results_larger_g = []
+    
+    for _ in range(num_mazes):
+        maze = generate_maze(size, p_blocked)
+        start = (0, 0)
+        goal = (size - 1, size - 1)
+
+        
+        plt.figure(figsize=(5, 5))
+        plt.imshow(maze, cmap='binary', origin='lower')
+        plt.title(f'Generated Maze: {_ + 1}')
+        plt.show()
+        path_smaller_g , cells_expanded_smaller_g = repeated_forward_a_star(maze, start, goal, 'smaller_g')
+        print(f"Path with smaller g-values for Maze {_ + 1}: {path_smaller_g}")
+        print(f"Cells expanded with smaller g-values Maze {_ + 1}: {cells_expanded_smaller_g}")
+        path_larger_g , cells_expanded_larger_g = repeated_forward_a_star(maze, start, goal, 'larger_g')
+        print(f"Path with larger g-values for Maze {_ + 1}: {path_larger_g}")
+        print(f"Cells expanded with larger g-values Maze {_ + 1}: {cells_expanded_larger_g}")
+
+        results_smaller_g.append(cells_expanded_smaller_g)
+        results_larger_g.append(cells_expanded_larger_g)
 
 
+    # Analysis of the results can be added here (e.g., average cells expanded)
+    avg_cells_expanded_smaller_g = np.mean(results_smaller_g)
+    avg_cells_expanded_larger_g = np.mean(results_larger_g)
 
+    print(f"Average cells expanded with smaller g-values: {avg_cells_expanded_smaller_g}")
+    print(f"Average cells expanded with larger g-values: {avg_cells_expanded_larger_g}")
 
-size = 10
-maze = generate_maze(size, 0.3)
-start = (0, 0)
-goal = (size - 1, size - 1)
+# Run the experiments
+run_experiments()
 
-path_smaller_g, cells_expanded_smaller_g = repeated_forward_a_star(maze, start, goal, 'smaller_g')
-print(f"Path with smaller g-values: {path_smaller_g}")
-print(f"Cells expanded with smaller g-values: {cells_expanded_smaller_g}")
+# You can adjust the size, p_blocked, and num_mazes as needed
 
-path_larger_g, cells_expanded_larger_g = repeated_forward_a_star(maze, start, goal, 'larger_g')
-print(f"Path with larger g-values: {path_larger_g}")
-print(f"Cells expanded with larger g-values: {cells_expanded_larger_g}")
+# size = 10
+# maze = generate_maze(size, 0.3)
+# start = (0, 0)
+# goal = (size - 1, size - 1)
 
-plt.figure(figsize=(5, 5))
-plt.imshow(maze, cmap='binary', origin='lower')
-plt.title(f'Generated Maze')
-plt.show()
+# path_smaller_g, cells_expanded_smaller_g = repeated_forward_a_star(maze, start, goal, 'smaller_g')
+# print(f"Path with smaller g-values: {path_smaller_g}")
+# print(f"Cells expanded with smaller g-values: {cells_expanded_smaller_g}")
+
+# path_larger_g, cells_expanded_larger_g = repeated_forward_a_star(maze, start, goal, 'larger_g')
+# print(f"Path with larger g-values: {path_larger_g}")
+# print(f"Cells expanded with larger g-values: {cells_expanded_larger_g}")
+
+# plt.figure(figsize=(5, 5))
+# plt.imshow(maze, cmap='binary', origin='lower')
+# plt.title(f'Generated Maze')
+# plt.show()
