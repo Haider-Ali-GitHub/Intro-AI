@@ -131,7 +131,7 @@ import random
 
 # Assuming generate_maze and repeated_forward_a_star functions are defined as before
 
-def run_experiments(size=10, p_blocked=0.3, num_mazes=50):
+def run_experiments(size=101, p_blocked=0.3, num_mazes=50):
     results_smaller_g = []
     results_larger_g = []
     
