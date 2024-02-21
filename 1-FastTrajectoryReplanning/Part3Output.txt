@@ -1,0 +1,206 @@
+Forward Search: Path Length = 0 Cells Expanded = 11927
+Backward Search: Path Length = 201 Cells Expanded = 1053
+Running maze 1/50...
+Maze 1 generated in 5.98410 seconds.
+Maze 1 Forward Search: Time = 0.00499s, Expanded Cells = 1008
+Maze 1 Backward Search: Time = 0.00650s, Expanded Cells = 1285
+Running maze 2/50...
+Maze 2 generated in 5.96499 seconds.
+Maze 2 Forward Search: Time = 0.00002s, Expanded Cells = 1
+Maze 2 Backward Search: Time = 0.00001s, Expanded Cells = 1
+Running maze 3/50...
+Maze 3 generated in 5.98690 seconds.
+Maze 3 Forward Search: Time = 0.05400s, Expanded Cells = 11972
+Maze 3 Backward Search: Time = 0.00314s, Expanded Cells = 655
+Running maze 4/50...
+Maze 4 generated in 5.98488 seconds.
+Maze 4 Forward Search: Time = 0.00592s, Expanded Cells = 1183
+Maze 4 Backward Search: Time = 0.04620s, Expanded Cells = 10258
+Running maze 5/50...
+Maze 5 generated in 5.98692 seconds.
+Maze 5 Forward Search: Time = 0.00455s, Expanded Cells = 904
+Maze 5 Backward Search: Time = 0.00474s, Expanded Cells = 987
+Running maze 6/50...
+Maze 6 generated in 5.98271 seconds.
+Maze 6 Forward Search: Time = 0.00400s, Expanded Cells = 818
+Maze 6 Backward Search: Time = 0.00597s, Expanded Cells = 1244
+Running maze 7/50...
+Maze 7 generated in 5.97326 seconds.
+Maze 7 Forward Search: Time = 0.00427s, Expanded Cells = 857
+Maze 7 Backward Search: Time = 0.00620s, Expanded Cells = 1206
+Running maze 8/50...
+Maze 8 generated in 6.00716 seconds.
+Maze 8 Forward Search: Time = 0.00398s, Expanded Cells = 807
+Maze 8 Backward Search: Time = 0.00747s, Expanded Cells = 1470
+Running maze 9/50...
+Maze 9 generated in 5.98177 seconds.
+Maze 9 Forward Search: Time = 0.00310s, Expanded Cells = 603
+Maze 9 Backward Search: Time = 0.05318s, Expanded Cells = 11904
+Running maze 10/50...
+Maze 10 generated in 6.20010 seconds.
+Maze 10 Forward Search: Time = 0.04949s, Expanded Cells = 10863
+Maze 10 Backward Search: Time = 0.00319s, Expanded Cells = 655
+Running maze 11/50...
+Maze 11 generated in 5.99858 seconds.
+Maze 11 Forward Search: Time = 0.00001s, Expanded Cells = 1
+Maze 11 Backward Search: Time = 0.04717s, Expanded Cells = 10594
+Running maze 12/50...
+Maze 12 generated in 5.99930 seconds.
+Maze 12 Forward Search: Time = 0.00779s, Expanded Cells = 1527
+Maze 12 Backward Search: Time = 0.00414s, Expanded Cells = 867
+Running maze 13/50...
+Maze 13 generated in 5.98747 seconds.
+Maze 13 Forward Search: Time = 0.00554s, Expanded Cells = 1100
+Maze 13 Backward Search: Time = 0.00466s, Expanded Cells = 963
+Running maze 14/50...
+Maze 14 generated in 5.98829 seconds.
+Maze 14 Forward Search: Time = 0.00002s, Expanded Cells = 1
+Maze 14 Backward Search: Time = 0.05071s, Expanded Cells = 11237
+Running maze 15/50...
+Maze 15 generated in 5.99774 seconds.
+Maze 15 Forward Search: Time = 0.00569s, Expanded Cells = 1126
+Maze 15 Backward Search: Time = 0.00418s, Expanded Cells = 859
+Running maze 16/50...
+Maze 16 generated in 5.98621 seconds.
+Maze 16 Forward Search: Time = 0.00679s, Expanded Cells = 1319
+Maze 16 Backward Search: Time = 0.00370s, Expanded Cells = 771
+Running maze 17/50...
+Maze 17 generated in 5.98495 seconds.
+Maze 17 Forward Search: Time = 0.00530s, Expanded Cells = 1062
+Maze 17 Backward Search: Time = 0.00392s, Expanded Cells = 822
+Running maze 18/50...
+Maze 18 generated in 5.98590 seconds.
+Maze 18 Forward Search: Time = 0.00618s, Expanded Cells = 1241
+Maze 18 Backward Search: Time = 0.05047s, Expanded Cells = 11247
+Running maze 19/50...
+Maze 19 generated in 6.00326 seconds.
+Maze 19 Forward Search: Time = 0.00470s, Expanded Cells = 912
+Maze 19 Backward Search: Time = 0.00640s, Expanded Cells = 1318
+Running maze 20/50...
+Maze 20 generated in 6.00278 seconds.
+Maze 20 Forward Search: Time = 0.04877s, Expanded Cells = 10688
+Maze 20 Backward Search: Time = 0.00365s, Expanded Cells = 749
+Running maze 21/50...
+Maze 21 generated in 5.99678 seconds.
+Maze 21 Forward Search: Time = 0.05119s, Expanded Cells = 11286
+Maze 21 Backward Search: Time = 0.04805s, Expanded Cells = 10786
+Running maze 22/50...
+Maze 22 generated in 5.98927 seconds.
+Maze 22 Forward Search: Time = 0.00540s, Expanded Cells = 1099
+Maze 22 Backward Search: Time = 0.00404s, Expanded Cells = 834
+Running maze 23/50...
+Maze 23 generated in 5.99574 seconds.
+Maze 23 Forward Search: Time = 0.00621s, Expanded Cells = 1266
+Maze 23 Backward Search: Time = 0.00467s, Expanded Cells = 980
+Running maze 24/50...
+Maze 24 generated in 5.97420 seconds.
+Maze 24 Forward Search: Time = 0.00614s, Expanded Cells = 1197
+Maze 24 Backward Search: Time = 0.00564s, Expanded Cells = 1159
+Running maze 25/50...
+Maze 25 generated in 5.97401 seconds.
+Maze 25 Forward Search: Time = 0.00849s, Expanded Cells = 1660
+Maze 25 Backward Search: Time = 0.00482s, Expanded Cells = 1000
+Running maze 26/50...
+Maze 26 generated in 5.96869 seconds.
+Maze 26 Forward Search: Time = 0.05609s, Expanded Cells = 12353
+Maze 26 Backward Search: Time = 0.00541s, Expanded Cells = 1102
+Running maze 27/50...
+Maze 27 generated in 5.98366 seconds.
+Maze 27 Forward Search: Time = 0.00672s, Expanded Cells = 1302
+Maze 27 Backward Search: Time = 0.05531s, Expanded Cells = 12301
+Running maze 28/50...
+Maze 28 generated in 5.98239 seconds.
+Maze 28 Forward Search: Time = 0.00704s, Expanded Cells = 1401
+Maze 28 Backward Search: Time = 0.00431s, Expanded Cells = 891
+Running maze 29/50...
+Maze 29 generated in 6.01162 seconds.
+Maze 29 Forward Search: Time = 0.00543s, Expanded Cells = 1094
+Maze 29 Backward Search: Time = 0.00754s, Expanded Cells = 1512
+Running maze 30/50...
+Maze 30 generated in 5.97342 seconds.
+Maze 30 Forward Search: Time = 0.00535s, Expanded Cells = 1074
+Maze 30 Backward Search: Time = 0.00466s, Expanded Cells = 978
+Running maze 31/50...
+Maze 31 generated in 5.97846 seconds.
+Maze 31 Forward Search: Time = 0.00493s, Expanded Cells = 978
+Maze 31 Backward Search: Time = 0.00693s, Expanded Cells = 1371
+Running maze 32/50...
+Maze 32 generated in 5.98500 seconds.
+Maze 32 Forward Search: Time = 0.00503s, Expanded Cells = 1004
+Maze 32 Backward Search: Time = 0.00731s, Expanded Cells = 1489
+Running maze 33/50...
+Maze 33 generated in 5.99089 seconds.
+Maze 33 Forward Search: Time = 0.00002s, Expanded Cells = 1
+Maze 33 Backward Search: Time = 0.05357s, Expanded Cells = 11884
+Running maze 34/50...
+Maze 34 generated in 5.98815 seconds.
+Maze 34 Forward Search: Time = 0.05229s, Expanded Cells = 11457
+Maze 34 Backward Search: Time = 0.00469s, Expanded Cells = 958
+Running maze 35/50...
+Maze 35 generated in 6.02112 seconds.
+Maze 35 Forward Search: Time = 0.00370s, Expanded Cells = 745
+Maze 35 Backward Search: Time = 0.00555s, Expanded Cells = 1131
+Running maze 36/50...
+Maze 36 generated in 5.98488 seconds.
+Maze 36 Forward Search: Time = 0.00586s, Expanded Cells = 1174
+Maze 36 Backward Search: Time = 0.00552s, Expanded Cells = 1146
+Running maze 37/50...
+Maze 37 generated in 6.00046 seconds.
+Maze 37 Forward Search: Time = 0.00872s, Expanded Cells = 1712
+Maze 37 Backward Search: Time = 0.05098s, Expanded Cells = 11362
+Running maze 38/50...
+Maze 38 generated in 5.99612 seconds.
+Maze 38 Forward Search: Time = 0.00599s, Expanded Cells = 1158
+Maze 38 Backward Search: Time = 0.00640s, Expanded Cells = 1327
+Running maze 39/50...
+Maze 39 generated in 5.99872 seconds.
+Maze 39 Forward Search: Time = 0.00973s, Expanded Cells = 1882
+Maze 39 Backward Search: Time = 0.00494s, Expanded Cells = 1011
+Running maze 40/50...
+Maze 40 generated in 5.98138 seconds.
+Maze 40 Forward Search: Time = 0.05930s, Expanded Cells = 12773
+Maze 40 Backward Search: Time = 0.00637s, Expanded Cells = 1204
+Running maze 41/50...
+Maze 41 generated in 6.24155 seconds.
+Maze 41 Forward Search: Time = 0.00584s, Expanded Cells = 1188
+Maze 41 Backward Search: Time = 0.00490s, Expanded Cells = 1022
+Running maze 42/50...
+Maze 42 generated in 5.99106 seconds.
+Maze 42 Forward Search: Time = 0.00582s, Expanded Cells = 1166
+Maze 42 Backward Search: Time = 0.00594s, Expanded Cells = 1228
+Running maze 43/50...
+Maze 43 generated in 5.97303 seconds.
+Maze 43 Forward Search: Time = 0.00650s, Expanded Cells = 1301
+Maze 43 Backward Search: Time = 0.00388s, Expanded Cells = 806
+Running maze 44/50...
+Maze 44 generated in 5.97968 seconds.
+Maze 44 Forward Search: Time = 0.00648s, Expanded Cells = 1260
+Maze 44 Backward Search: Time = 0.00550s, Expanded Cells = 1131
+Running maze 45/50...
+Maze 45 generated in 5.94909 seconds.
+Maze 45 Forward Search: Time = 0.00625s, Expanded Cells = 1270
+Maze 45 Backward Search: Time = 0.01833s, Expanded Cells = 3542
+Running maze 46/50...
+Maze 46 generated in 5.96353 seconds.
+Maze 46 Forward Search: Time = 0.05025s, Expanded Cells = 11064
+Maze 46 Backward Search: Time = 0.00673s, Expanded Cells = 1383
+Running maze 47/50...
+Maze 47 generated in 5.97553 seconds.
+Maze 47 Forward Search: Time = 0.00606s, Expanded Cells = 1189
+Maze 47 Backward Search: Time = 0.00500s, Expanded Cells = 1030
+Running maze 48/50...
+Maze 48 generated in 5.98628 seconds.
+Maze 48 Forward Search: Time = 0.00549s, Expanded Cells = 1117
+Maze 48 Backward Search: Time = 0.00485s, Expanded Cells = 1010
+Running maze 49/50...
+Maze 49 generated in 5.94740 seconds.
+Maze 49 Forward Search: Time = 0.00463s, Expanded Cells = 928
+Maze 49 Backward Search: Time = 0.00650s, Expanded Cells = 1331
+Running maze 50/50...
+Maze 50 generated in 5.96901 seconds.
+Maze 50 Forward Search: Time = 0.00440s, Expanded Cells = 864
+Maze 50 Backward Search: Time = 0.00621s, Expanded Cells = 1287
+
+--- Summary of Results ---
+Forward Search - Average Time: 0.01281s, Average Expanded Cells: 2719.12
+Backward Search - Average Time: 0.01360s, Average Expanded Cells: 2945.76

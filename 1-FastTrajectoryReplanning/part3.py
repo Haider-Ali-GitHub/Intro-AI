@@ -160,5 +160,6 @@ def run_comparative_experiments(size=101, p_blocked=0.3, num_mazes=10):
 size_of_grid = 101
 mazes_to_test = 10
 
-run_comparative_experiments(size_of_grid=101, p_blocked=0.3, mazes_to_test=10)
+run_comparative_experiments(size=101, p_blocked=0.3, num_mazes=50)
+
 

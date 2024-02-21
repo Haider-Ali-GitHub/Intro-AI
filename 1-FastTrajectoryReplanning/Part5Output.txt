@@ -1,0 +1,103 @@
+Maze 1 Repeated Forward A* Path Length: 200, Cells Expanded: 7458, Runtime: 0.38514089584350586 seconds
+Maze 1 Adaptive A* Path Length: 201, Cells Expanded: 7458, Runtime: 0.0375981330871582 seconds
+Maze 2 Repeated Forward A* Path Length: 200, Cells Expanded: 6148, Runtime: 0.3198399543762207 seconds
+Maze 2 Adaptive A* Path Length: 201, Cells Expanded: 6148, Runtime: 0.031056880950927734 seconds
+Maze 3 Repeated Forward A* Path Length: 200, Cells Expanded: 6769, Runtime: 0.351024866104126 seconds
+Maze 3 Adaptive A* Path Length: 201, Cells Expanded: 6769, Runtime: 0.03426313400268555 seconds
+Maze 4 Repeated Forward A* Path Length: 200, Cells Expanded: 7143, Runtime: 0.3771219253540039 seconds
+Maze 4 Adaptive A* Path Length: 201, Cells Expanded: 7143, Runtime: 0.03620719909667969 seconds
+Maze 5 Repeated Forward A* Path Length: 200, Cells Expanded: 7464, Runtime: 0.4591341018676758 seconds
+Maze 5 Adaptive A* Path Length: 201, Cells Expanded: 7464, Runtime: 0.038362979888916016 seconds
+Maze 6 Repeated Forward A* Path Length: 200, Cells Expanded: 6565, Runtime: 0.3406052589416504 seconds
+Maze 6 Adaptive A* Path Length: 201, Cells Expanded: 6565, Runtime: 0.03355908393859863 seconds
+Maze 7 Repeated Forward A* Path Length: 200, Cells Expanded: 6334, Runtime: 0.3615298271179199 seconds
+Maze 7 Adaptive A* Path Length: 201, Cells Expanded: 6334, Runtime: 0.03213691711425781 seconds
+Maze 8 Repeated Forward A* Path Length: 0, Cells Expanded: 8770, Runtime: 0.537895917892456 seconds
+Maze 8 Adaptive A* Path Length: 0, Cells Expanded: 0, Runtime: 0.043591976165771484 seconds
+Maze 9 Repeated Forward A* Path Length: 0, Cells Expanded: 8824, Runtime: 0.44501209259033203 seconds
+Maze 9 Adaptive A* Path Length: 0, Cells Expanded: 0, Runtime: 0.0426180362701416 seconds
+Maze 10 Repeated Forward A* Path Length: 200, Cells Expanded: 7682, Runtime: 0.4670116901397705 seconds
+Maze 10 Adaptive A* Path Length: 201, Cells Expanded: 7682, Runtime: 0.0387420654296875 seconds
+Maze 11 Repeated Forward A* Path Length: 0, Cells Expanded: 8789, Runtime: 0.4530510902404785 seconds
+Maze 11 Adaptive A* Path Length: 0, Cells Expanded: 0, Runtime: 0.04220271110534668 seconds
+Maze 12 Repeated Forward A* Path Length: 200, Cells Expanded: 7309, Runtime: 0.4455108642578125 seconds
+Maze 12 Adaptive A* Path Length: 201, Cells Expanded: 7309, Runtime: 0.037261009216308594 seconds
+Maze 13 Repeated Forward A* Path Length: 200, Cells Expanded: 7384, Runtime: 0.42728400230407715 seconds
+Maze 13 Adaptive A* Path Length: 201, Cells Expanded: 7384, Runtime: 0.0374608039855957 seconds
+Maze 14 Repeated Forward A* Path Length: 200, Cells Expanded: 6110, Runtime: 0.30051684379577637 seconds
+Maze 14 Adaptive A* Path Length: 201, Cells Expanded: 6110, Runtime: 0.031186819076538086 seconds
+Maze 15 Repeated Forward A* Path Length: 200, Cells Expanded: 6479, Runtime: 0.3343019485473633 seconds
+Maze 15 Adaptive A* Path Length: 201, Cells Expanded: 6479, Runtime: 0.03289794921875 seconds
+Maze 16 Repeated Forward A* Path Length: 200, Cells Expanded: 7402, Runtime: 0.39775681495666504 seconds
+Maze 16 Adaptive A* Path Length: 201, Cells Expanded: 7402, Runtime: 0.03726983070373535 seconds
+Maze 17 Repeated Forward A* Path Length: 200, Cells Expanded: 6748, Runtime: 0.3822751045227051 seconds
+Maze 17 Adaptive A* Path Length: 201, Cells Expanded: 6748, Runtime: 0.034500837326049805 seconds
+Maze 18 Repeated Forward A* Path Length: 0, Cells Expanded: 1, Runtime: 4.57763671875e-05 seconds
+Maze 18 Adaptive A* Path Length: 0, Cells Expanded: 0, Runtime: 1.621246337890625e-05 seconds
+Maze 19 Repeated Forward A* Path Length: 200, Cells Expanded: 7645, Runtime: 0.4463372230529785 seconds
+Maze 19 Adaptive A* Path Length: 201, Cells Expanded: 7645, Runtime: 0.038368940353393555 seconds
+Maze 20 Repeated Forward A* Path Length: 200, Cells Expanded: 7498, Runtime: 0.42890286445617676 seconds
+Maze 20 Adaptive A* Path Length: 201, Cells Expanded: 7498, Runtime: 0.03789114952087402 seconds
+Maze 21 Repeated Forward A* Path Length: 0, Cells Expanded: 8775, Runtime: 0.4478299617767334 seconds
+Maze 21 Adaptive A* Path Length: 0, Cells Expanded: 0, Runtime: 0.04188966751098633 seconds
+Maze 22 Repeated Forward A* Path Length: 200, Cells Expanded: 7218, Runtime: 0.4042789936065674 seconds
+Maze 22 Adaptive A* Path Length: 201, Cells Expanded: 7218, Runtime: 0.03644418716430664 seconds
+Maze 23 Repeated Forward A* Path Length: 200, Cells Expanded: 7106, Runtime: 0.4049239158630371 seconds
+Maze 23 Adaptive A* Path Length: 201, Cells Expanded: 7106, Runtime: 0.03575491905212402 seconds
+Maze 24 Repeated Forward A* Path Length: 200, Cells Expanded: 6435, Runtime: 0.3405468463897705 seconds
+Maze 24 Adaptive A* Path Length: 201, Cells Expanded: 6435, Runtime: 0.03268694877624512 seconds
+Maze 25 Repeated Forward A* Path Length: 200, Cells Expanded: 7221, Runtime: 0.3914620876312256 seconds
+Maze 25 Adaptive A* Path Length: 201, Cells Expanded: 7221, Runtime: 0.036396026611328125 seconds
+Maze 26 Repeated Forward A* Path Length: 0, Cells Expanded: 8778, Runtime: 0.4359250068664551 seconds
+Maze 26 Adaptive A* Path Length: 0, Cells Expanded: 0, Runtime: 0.04226183891296387 seconds
+Maze 27 Repeated Forward A* Path Length: 200, Cells Expanded: 6861, Runtime: 0.3880300521850586 seconds
+Maze 27 Adaptive A* Path Length: 201, Cells Expanded: 6861, Runtime: 0.036634206771850586 seconds
+Maze 28 Repeated Forward A* Path Length: 200, Cells Expanded: 6991, Runtime: 0.4125549793243408 seconds
+Maze 28 Adaptive A* Path Length: 201, Cells Expanded: 6991, Runtime: 0.03551912307739258 seconds
+Maze 29 Repeated Forward A* Path Length: 0, Cells Expanded: 8825, Runtime: 0.46127796173095703 seconds
+Maze 29 Adaptive A* Path Length: 0, Cells Expanded: 0, Runtime: 0.04206109046936035 seconds
+Maze 30 Repeated Forward A* Path Length: 200, Cells Expanded: 7321, Runtime: 0.41860198974609375 seconds
+Maze 30 Adaptive A* Path Length: 201, Cells Expanded: 7321, Runtime: 0.03720593452453613 seconds
+Maze 31 Repeated Forward A* Path Length: 200, Cells Expanded: 7123, Runtime: 0.38434791564941406 seconds
+Maze 31 Adaptive A* Path Length: 201, Cells Expanded: 7123, Runtime: 0.03601694107055664 seconds
+Maze 32 Repeated Forward A* Path Length: 200, Cells Expanded: 6913, Runtime: 0.37356996536254883 seconds
+Maze 32 Adaptive A* Path Length: 201, Cells Expanded: 6913, Runtime: 0.03493189811706543 seconds
+Maze 33 Repeated Forward A* Path Length: 0, Cells Expanded: 8785, Runtime: 0.482464075088501 seconds
+Maze 33 Adaptive A* Path Length: 0, Cells Expanded: 0, Runtime: 0.04222726821899414 seconds
+Maze 34 Repeated Forward A* Path Length: 0, Cells Expanded: 8836, Runtime: 0.45584797859191895 seconds
+Maze 34 Adaptive A* Path Length: 0, Cells Expanded: 0, Runtime: 0.04211902618408203 seconds
+Maze 35 Repeated Forward A* Path Length: 200, Cells Expanded: 6484, Runtime: 0.34955716133117676 seconds
+Maze 35 Adaptive A* Path Length: 201, Cells Expanded: 6484, Runtime: 0.04167890548706055 seconds
+Maze 36 Repeated Forward A* Path Length: 200, Cells Expanded: 6710, Runtime: 0.34590911865234375 seconds
+Maze 36 Adaptive A* Path Length: 201, Cells Expanded: 6710, Runtime: 0.034208059310913086 seconds
+Maze 37 Repeated Forward A* Path Length: 200, Cells Expanded: 6708, Runtime: 0.3514900207519531 seconds
+Maze 37 Adaptive A* Path Length: 201, Cells Expanded: 6708, Runtime: 0.03420090675354004 seconds
+Maze 38 Repeated Forward A* Path Length: 200, Cells Expanded: 6988, Runtime: 0.37743616104125977 seconds
+Maze 38 Adaptive A* Path Length: 201, Cells Expanded: 6988, Runtime: 0.035736083984375 seconds
+Maze 39 Repeated Forward A* Path Length: 200, Cells Expanded: 6003, Runtime: 0.352308988571167 seconds
+Maze 39 Adaptive A* Path Length: 201, Cells Expanded: 6003, Runtime: 0.030807971954345703 seconds
+Maze 40 Repeated Forward A* Path Length: 0, Cells Expanded: 8810, Runtime: 0.4362509250640869 seconds
+Maze 40 Adaptive A* Path Length: 0, Cells Expanded: 0, Runtime: 0.042777299880981445 seconds
+Maze 41 Repeated Forward A* Path Length: 200, Cells Expanded: 6414, Runtime: 0.3612549304962158 seconds
+Maze 41 Adaptive A* Path Length: 201, Cells Expanded: 6414, Runtime: 0.03264617919921875 seconds
+Maze 42 Repeated Forward A* Path Length: 200, Cells Expanded: 6906, Runtime: 0.37148189544677734 seconds
+Maze 42 Adaptive A* Path Length: 201, Cells Expanded: 6906, Runtime: 0.03521108627319336 seconds
+Maze 43 Repeated Forward A* Path Length: 200, Cells Expanded: 7113, Runtime: 0.40699195861816406 seconds
+Maze 43 Adaptive A* Path Length: 201, Cells Expanded: 7113, Runtime: 0.03564119338989258 seconds
+Maze 44 Repeated Forward A* Path Length: 200, Cells Expanded: 7224, Runtime: 0.374392032623291 seconds
+Maze 44 Adaptive A* Path Length: 201, Cells Expanded: 7224, Runtime: 0.03633904457092285 seconds
+Maze 45 Repeated Forward A* Path Length: 200, Cells Expanded: 6610, Runtime: 0.3558309078216553 seconds
+Maze 45 Adaptive A* Path Length: 201, Cells Expanded: 6610, Runtime: 0.03412890434265137 seconds
+Maze 46 Repeated Forward A* Path Length: 200, Cells Expanded: 7118, Runtime: 0.36808276176452637 seconds
+Maze 46 Adaptive A* Path Length: 201, Cells Expanded: 7118, Runtime: 0.0358729362487793 seconds
+Maze 47 Repeated Forward A* Path Length: 200, Cells Expanded: 6293, Runtime: 0.3311328887939453 seconds
+Maze 47 Adaptive A* Path Length: 201, Cells Expanded: 6293, Runtime: 0.03171515464782715 seconds
+Maze 48 Repeated Forward A* Path Length: 200, Cells Expanded: 6217, Runtime: 0.28521203994750977 seconds
+Maze 48 Adaptive A* Path Length: 201, Cells Expanded: 6217, Runtime: 0.031455039978027344 seconds
+Maze 49 Repeated Forward A* Path Length: 0, Cells Expanded: 8747, Runtime: 0.4826059341430664 seconds
+Maze 49 Adaptive A* Path Length: 0, Cells Expanded: 0, Runtime: 0.04185795783996582 seconds
+Maze 50 Repeated Forward A* Path Length: 200, Cells Expanded: 6726, Runtime: 0.34475016593933105 seconds
+Maze 50 Adaptive A* Path Length: 201, Cells Expanded: 6726, Runtime: 0.03376579284667969 seconds
+
+Average Runtime for Repeated Forward A*: 0.38713297367095945 seconds
+Average Runtime for Adaptive A*: 0.035947685241699216 seconds
