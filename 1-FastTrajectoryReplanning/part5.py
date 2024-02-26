@@ -4,7 +4,7 @@ import numpy as np
 import random
 import time
 
-def generate_maze(size=10, p_blocked=0.3):
+def generate_maze(size=101, p_blocked=0.3):
     grid = np.full((size, size), -1)
     directions = [(0, -1), (1, 0), (0, 1), (-1, 0)]
     
@@ -48,7 +48,6 @@ def heuristic(cell, goal):
 
 
 def adaptive_a_star(maze, start, goal):
-    # Define h_values and g_scores here so they are accessible within heuristic
     h_values = {}
     g_scores = {start: 0}
 
@@ -223,7 +222,7 @@ def run_experiments(size=101, p_blocked=0.3, num_mazes=50):
 run_experiments()
 
 
-# You can adjust the size, p_blocked, and num_mazes as needed
+
 
 # size = 10
 # maze = generate_maze(size, 0.3)

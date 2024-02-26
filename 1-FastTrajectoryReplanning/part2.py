@@ -3,7 +3,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 import random
 
-def generate_maze(size=10, p_blocked=0.3):
+def generate_maze(size=101, p_blocked=0.3):
     grid = np.full((size, size), -1)
     directions = [(0, -1), (1, 0), (0, 1), (-1, 0)]
     
@@ -125,7 +125,7 @@ def repeated_forward_a_star(maze, start, goal, tie_breaking):
         # No path found
         return [], expanded_cells
 
-# Assuming generate_maze and repeated_forward_a_star functions are defined as before
+
 
 def run_experiments(size=101, p_blocked=0.3, num_mazes=50):
     results_smaller_g = []
@@ -166,11 +166,11 @@ def run_experiments(size=101, p_blocked=0.3, num_mazes=50):
     print(f"Average cells expanded with smaller g-values: {avg_cells_expanded_smaller_g}")
     print(f"Average cells expanded with larger g-values: {avg_cells_expanded_larger_g}")
 
-# Run the experiments
+
 run_experiments()
 
 
-# You can adjust the size, p_blocked, and num_mazes as needed
+
 
 # size = 10
 # maze = generate_maze(size, 0.3)

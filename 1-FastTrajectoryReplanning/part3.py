@@ -4,7 +4,7 @@ import heapq
 import random
 import matplotlib.pyplot as plt
 
-# GENERATE THE MAZE
+
 def generate_maze(size=101, p_blocked=0.3):
     grid = np.full((size, size), -1)  # Initialize all cells as unvisited
     directions = [(0, -1), (1, 0), (0, 1), (-1, 0)]  # Four directions (N, E, S, W)
